@@ -45,7 +45,7 @@ export default class App extends React.Component {
     <ReduxProvider store={store}>
       <NavigatorProvider
         style={styles.flex}
-        ref={(nav) => {
+        ref={nav => {
           this.navigator = nav;
         }}>
         <View style={[styles.flex]}>

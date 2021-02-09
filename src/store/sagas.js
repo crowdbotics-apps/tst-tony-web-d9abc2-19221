@@ -9,8 +9,8 @@ export default function* rootSaga() {
     // getBalanceWatcher
   ];
   yield all(
-    sagas.map((saga) =>
-      spawn(function* () {
+    sagas.map(saga =>
+      spawn(function*() {
         while (true) {
           try {
             yield call(saga);

@@ -51,11 +51,7 @@ export default class SideMenu extends React.Component {
   render = () => (
     <View style={styles.root}>
       <ScrollView showsVerticalScrollIndicator={false}>
-        <View
-          style={[
-            styles.container,
-            styles.content,
-          ]}>
+        <View style={[styles.container, styles.content]}>
           {this.renderIcon()}
           <Text category="h6" style={styles.text}>
             Crowdbotics

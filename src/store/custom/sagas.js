@@ -1,6 +1,6 @@
-import { put, call, all, spawn } from "redux-saga/effects"
-import { customApiService } from "./services"
-import * as types from "./constants"
+import {put, call, all, spawn} from 'redux-saga/effects';
+import {customApiService} from './services';
+import * as types from './constants';
 
 /* Example worker saga and watcher setup
 
@@ -24,21 +24,21 @@ function* getBalanceWatcher() {
 // https://redux-saga.js.org/docs/advanced/RootSaga.html
 export default function* customRootSaga() {
   const sagas = [
-      // Example watcher
-      // getBalanceWatcher
-  ]
+    // Example watcher
+    // getBalanceWatcher
+  ];
   yield all(
     sagas.map(saga =>
       spawn(function*() {
         while (true) {
           try {
-            yield call(saga)
-            break
+            yield call(saga);
+            break;
           } catch (e) {
-            console.log(e)
+            console.log(e);
           }
         }
-      })
-    )
-  )
+      }),
+    ),
+  );
 }
