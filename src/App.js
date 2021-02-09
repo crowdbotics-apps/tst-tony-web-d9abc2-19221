@@ -2,11 +2,11 @@ import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 import {Provider as ReduxProvider} from 'react-redux';
 
-import SplashScreen from './src/features/SplashScreen';
-import {store} from './src/store';
-import NavigatorProvider from './src/navigator/mainNavigator';
-import {setupHttpConfig} from './src/utils/http';
-import * as NavigationService from './src/navigator/NavigationService';
+import SplashScreen from './features/SplashScreen';
+import {store} from './store';
+import NavigatorProvider from './navigator/mainNavigator';
+import {setupHttpConfig} from './utils/http';
+import * as NavigationService from './navigator/NavigationService';
 
 export default class App extends React.Component {
   state = {
