@@ -13,12 +13,11 @@ import ImageCardList017434 from "../features/ImageCardList017434/navigator"
 
 const AppNavigator = {
   //@BlueprintNavigationInsertion
-
+  ImageCardList017434: { screen: ImageCardList017434 },
   /** new navigators can be added here */
   SplashScreen: {
     screen: SplashScreen
-  },
-  ImageCardList017434: { screen: ImageCardList017434 }
+  }
 }
 
 const DrawerAppNavigator = createDrawerNavigator(

@@ -1,6 +1,6 @@
 import { createStackNavigator } from "react-navigation-stack"
 import Blank from "./screens/index"
-export default (BlankNavigator = createStackNavigator(
+export default createStackNavigator(
   { Blank: { screen: Blank } },
   { initialRouteName: "Blank" }
-))
+)
