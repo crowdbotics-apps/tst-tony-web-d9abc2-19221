@@ -1,7 +1,10 @@
-import * as types from './constants';
+import * as types from "./constants"
 
-const initialState = {};
+const initialState = {}
 
 export default function apiReducer(state = initialState, action) {
-  return state;
+  switch (action.type) {
+    default:
+      return state
+  }
 }
