@@ -10,7 +10,7 @@
     "start": "react-native start",
     "test": "jest",
     "web": "react-app-rewired start",
-    "web-build": "react-app-rewired build"
+    "web-build": "react-app-rewired build && mkdir -p backend/web_build && cp -R build/* backend/web_build"
   },
   "jest": {
     "preset": "react-native"

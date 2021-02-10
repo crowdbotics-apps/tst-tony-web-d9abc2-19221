@@ -2,7 +2,6 @@ const webpack = require('webpack');
 
 module.exports = function override(config, env) {
   //do stuff with the webpack config...
-  console.log('overwrite!');
   config.plugins.push(
     new webpack.DefinePlugin({
       __DEV__: process.env.NODE_ENV !== 'production',
