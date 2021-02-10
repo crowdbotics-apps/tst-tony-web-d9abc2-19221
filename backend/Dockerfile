@@ -24,7 +24,7 @@ WORKDIR /opt/webapp
 COPY . .
 RUN pip3 install --no-cache-dir -q 'pipenv==2018.11.26' && pipenv install --deploy --system
 
-RUN cd frontend && npm install && npm audit fix && npm run build
+#RUN cd frontend && npm install && npm audit fix && npm run build
 
 RUN python3 manage.py collectstatic --no-input
 
