@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios from "axios"
 
 /* Example service layer
 const customAPI = axios.create({
@@ -18,4 +18,4 @@ function getBalance(id) {
 export const customApiService = {
   // example object
   // getBalance,
-};
+}
