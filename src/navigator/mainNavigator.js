@@ -1,12 +1,11 @@
-import { createAppContainer } from "react-navigation"
-import { createStackNavigator } from "react-navigation-stack"
-import { createDrawerNavigator } from "react-navigation-drawer"
+import React from "react"
+import { createDrawerNavigator } from "@react-navigation/drawer"
+import { NavigationContainer } from "@react-navigation/native"
 
 import SplashScreen from "../features/SplashScreen"
 import SideMenu from "./sideMenu"
 //@BlueprintImportInsertion
 import ImageCardList017434 from "../features/ImageCardList017434/navigator"
-
 /**
  * new navigators can be imported here
  */
@@ -20,15 +19,18 @@ const AppNavigator = {
   }
 }
 
-const DrawerAppNavigator = createDrawerNavigator(
-  {
-    ...AppNavigator
-  },
-  {
-    contentComponent: SideMenu
-  }
-)
+const Drawer = createDrawerNavigator()
 
-const AppContainer = createAppContainer(DrawerAppNavigator)
+const AppContainer = () => {
+  return (
+    <NavigationContainer>
+      <Drawer.Navigator drawerContent={props => <SideMenu {...props} />}>
+        {Object.keys(AppNavigator).map(s => (
+          <Drawer.Screen name={s} component={AppNavigator[s].screen} />
+        ))}
+      </Drawer.Navigator>
+    </NavigationContainer>
+  )
+}
 
 export default AppContainer
